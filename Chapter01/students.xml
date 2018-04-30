@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This is an example of student feed in XML -->
+<students>
+	<student>
+		<studentid>101</studentid>
+		<firstname>John</firstname>
+		<lastname>Doe</lastname>
+		<classes>
+			<class>Business Research</class>
+			<class>Economics</class>
+			<class>Finance</class>
+		</classes>
+	</student>
+	<student>
+		<studentid>102</studentid>
+		<firstname>Jane</firstname>
+		<lastname>Dane</lastname>
+		<classes>
+			<class>Marketing</class>
+			<class>Economics</class>
+			<class>Finance</class>
+		</classes>
+	</student>
+</students>

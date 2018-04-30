@@ -1,0 +1,39 @@
+/* This is an example of student feed in JSON */
+{
+	"students" :{
+		"0" :{
+			"studentid" : 101,
+			"firstname" : "John",
+			"lastname" 	: "Doe",
+			"classes" : [
+				"Business Research",
+				"Economics",
+				"Finance"
+			]
+		},
+		"1" :{
+			"studentid" : 102,
+			"firstname" : "Jane",
+			"lastname" 	: "Dane",
+			"classes" : [
+				"Marketing",
+				"Economics",
+				"Finance"
+			]
+		}
+	}
+}
+{
+	"studentid" : 101,
+	"firstname" : "John",
+	"lastname" 	: "Doe",
+	"isStudent" : true,
+	"classes" : [
+		"Business Research",
+		"Economics",
+		"Finance"
+	],
+	"getFullName" : function(){
+		alert(`${this.firstname} ${this.lastname}`);
+	} 
+}

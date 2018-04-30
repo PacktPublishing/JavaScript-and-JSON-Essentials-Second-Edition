@@ -1,0 +1,29 @@
+<!--get-student-cor.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get all students</title>
+    <!-- Go to https://code.jquery.com/ for more details -->
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(() => {
+        $.ajax({
+        	"url" : "http://localhost:3300",
+        	"type" : "GET",
+        	"data" : {},
+        	"dataTYPE":"JSON"
+        })
+        .done((data)=>{
+        	console.log(data);
+        })
+    })
+    </script>
+</head>
+<body>
+    <h2>Asynchronous call for student api</h2>
+    <p>Cross origin request neither handled at server nor at client side</p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Asynchronous Call to Reddit</title>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(() => {
+        $.ajax({
+        	"url" : "http://localhost:3300/.jsonp?jsonp=getStudentData",
+        	"type" : "GET",
+        	"data" : {},
+        	"dataType":"JSONP",
+        	"jsonpCallback":"getStudentData"
+        })
+        .done((data)=>{
+        	console.log(data);
+        })
+    })
+    </script>
+</head>
+<body>
+    <h2>Asynchronous call for Students api</h2>
+    <p>Cross request is not handled at server but at client</p>
+</body>
+</html>

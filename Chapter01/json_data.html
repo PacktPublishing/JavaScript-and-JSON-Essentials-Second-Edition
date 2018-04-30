@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		let complexJson = {
+		  "studentid" : 101,
+		  "firstname" : "John",
+		  "lastname" : "Doe",
+		  "isStudent" : true,
+		  "scores" : [40, 50],
+		  "courses" : {
+		      "major" : "Finance",
+		      "minor" : "Marketing"  
+		  }
+		}; 
+		alert(complexJson.studentid); //101
+		alert(complexJson.firstname); //John
+		alert(complexJson.isStudent); //true
+		alert(complexJson.scores[1]); //50
+		alert(complexJson.courses.major); //Finance
+	</script>
+</head>
+<body>
+	<h2>Complex Data in JSON</h2>
+	<p>This is a test program to load complex json data into a variable</p>
+</body>
+</html>

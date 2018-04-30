@@ -1,0 +1,10 @@
+{
+	"apiflow" : {
+		"name" : "Test-API-Flow",
+		"sequence" : ["start-app", "test-routes", "stop-app"]
+	},
+	"routes":{
+		"name" : "test-routes",
+		"src" : "./routes.specs.js"
+	}
+}

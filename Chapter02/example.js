@@ -1,0 +1,1 @@
+const x = "This is value of x and is being retrieved from external js file";

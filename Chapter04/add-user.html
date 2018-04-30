@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adding a student</title>
+    <!-- Go to https://code.jquery.com/ for more details -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(() => {
+        const first_name = "kent";
+        const last_name = "clark";
+        const addresses = ["5400 W Parmer Ln", "1919 Elridge Pkwy"];
+        const zipcodes = ["78757", "77887"];
+        const classes = ["International Business", "Economics Statistics"];
+        $.ajax({
+            "url": "http://localhost:3300/addUser",
+            "type": "POST",
+            "data": {
+                "first_name": first_name,
+                "last_name": last_name,
+                "addresses": addresses,
+                "zip_codes": zipcodes,
+                "classes": classes
+            },
+            "content-type": "application/json; charset.utf-8",
+            "dataType": "JSON"
+        }).done(function(data) {
+            console.log(data);
+        });
+    });
+    </script>
+</head>
+<body>
+    <h2>Adding a student</h2>
+    <p>Storing the student information</p>
+</body>
+</html>

@@ -1,0 +1,12 @@
+[{
+    "studentid": 101,
+    "firstname": "John",
+    "lastname": "Doe",
+    "classes": ["Business Research", "Economics", "Finance"]
+},
+{
+    "studentid": 102,
+    "firstname": "Jane",
+    "lastname": "Dane",
+    "classes": ["Marketing", "Economics", "Finance"]
+}]

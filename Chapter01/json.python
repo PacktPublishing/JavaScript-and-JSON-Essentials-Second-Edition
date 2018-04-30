@@ -1,0 +1,24 @@
+import json
+
+
+student = [{
+		  "studentid" : 101,
+		  "firstname" : "John",
+		  "lastname" : "Doe",
+		  ## make sure we have first letter capitalize in case of boolean
+		  "isStudent" : True, 
+		  "scores" : [40, 50],
+		  "courses" : {
+		      "major" : "Finance",
+		      "minor" : "Marketing"  
+		  }
+		}]
+
+print json.dumps(student)
+
+
+
+student_json = '''[{"studentid": 101, "firstname": "John", "lastname": "Doe", "isStudent": true, "courses": {"major": "Finance", "minor": "Marketing"}, "scores": [40, 50]}]'''
+
+
+print json.loads(student_json)

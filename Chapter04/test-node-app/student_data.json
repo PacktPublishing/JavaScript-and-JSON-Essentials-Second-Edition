@@ -1,0 +1,20 @@
+[{
+    "studentid": 101,
+    "firstname": "John",
+    "lastname": "Doe",
+    "zipcode" : 400001,
+    "classes": ["Business Research", "Economics", "Finance"]
+},
+{
+    "studentid": 102,
+    "firstname": "Jane",
+    "lastname": "Dane",
+    "zipcode" : 400002,
+    "classes": ["Marketing", "Economics", "Finance"]
+},{
+    "studentid": 103,
+    "firstname": "Scott",
+    "lastname": "tiger",
+    "zipcode" : 400002,
+    "classes": ["Physics", "Chemistry", "Maths"]
+}]

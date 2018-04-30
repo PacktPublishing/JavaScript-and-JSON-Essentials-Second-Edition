@@ -1,0 +1,23 @@
+[{
+    "studentid": 101,
+    "firstname": "John",
+    "lastname": "Doe",
+    "zipcode" : 400001,
+    "level" : "Freshman", 
+    "class": "Environmental Toxicology"
+},
+{
+    "studentid": 102,
+    "firstname": "Jane",
+    "lastname": "Dane",
+    "zipcode" : 400002,
+    "level" : "Senior", 
+    "class": "Economics"
+},{
+    "studentid": 103,
+    "firstname": "Scott",
+    "lastname": "tiger",
+    "zipcode" : 400002,
+    "level" : "expert", 
+    "class": "Physics"
+}]

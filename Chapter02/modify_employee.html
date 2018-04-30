@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Modify JSON based on joining year</title>
+		<script type="text/javascript" src="data.js"></script>
+		<script type="text/javascript">
+			for(let i in data_json){
+				let data = data_json[i];
+				//retrieve the year
+				const join_year = parseInt(data.hire_date.slice(0,4));
+
+				if(join_year > 2006){
+					data.company = "Company1";
+				}else{
+					data.company = "Company2";
+				}
+
+				let message = `Employee ${data.emp_no}
+					joined in the year ${join_year}
+					belongs to ${data.company}`;
+
+				console.log(message);
+			}
+		</script>
+	</head>
+	<body>
+		<h2>Modifying JSON based on joining year</h2>
+		<p>This is a test program to learn how JSON is imported
+			from a feed could be locally modified.</p>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!--jquery-ajax.html-->
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+    <title>Ajax using jquery</title>
+    <!-- Go to https://code.jquery.com/ for more details -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(() => {
+        
+        function* generateData(){
+            //while(true){
+                //console.log("Generator console executed!!");
+                yield $.getJSON('http://localhost:3300/');
+            //}
+        }
+        const generatorInst = generateData();
+        
+        //console.log("query", );
+        $('#getFeed').click(()=>{
+            /** Generator**/
+            //console.log(generatorInst.next());
+            /**Tradition callback**/
+            $.getJSON('http://localhost:3300/',(jsonData)=>{
+                if(jsonData){
+                    $.each(jsonData, (key, value)=>{
+                        $('#feedContainerList')
+                        .append(`<li>Student Id is ${value.studentid}
+                            and the student name is ${value.firstname}
+                            and ${value.lastname}
+                            </li>`);
+                    })
+                }
+                console.log("jsonData", jsonData);
+            })
+            
+            /** Promises
+            $.getJSON('http://localhost:3300/')
+            .then((jsonData)=>{
+                //console.log("jsonData", jsonData);
+                throw "Error : Something is wrong";
+                return jsonData;
+            })
+            .then((jsonDataAgain)=>{
+                console.log("recieved jsonData again", jsonDataAgain);
+                return jsonDataAgain;
+            })
+            .catch((error)=>{
+                console.log("Error handled", error);
+            })**/
+
+        }) 
+    })
+    </script>
+</head>
+<body>
+    <h2>AJAX using jquery</h2>
+    <input type="button" id="getFeed" value="Get Feed" />
+    <div id="feedContainer">
+        <div id="feedContainerList">
+
+        </div>
+    </div>
+</body>
+</html>

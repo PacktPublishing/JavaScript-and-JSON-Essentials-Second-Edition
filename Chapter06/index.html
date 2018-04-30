@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="jquery.cycle.js"></script>
+	<script type="text/javascript">
+		$(document).ready(()=>{
+			let htmlContent = ``;
+			$.getJSON('http://localhost:3300', (data)=>{
+				/**
+		        $.each(data, (key, value) => {
+		            $.each(value, (index, student) => {
+		                htmlContent += `<div class="student">`;
+		                htmlContent += `<h3>${student.level} of the Month</h3>`;
+		                htmlContent += `<h4>${student.firstname} ${student.lastname}</h4>`;
+		                htmlContent += `<p>${student.class}</p>`;
+		                htmlContent += `</div>`;
+		            });
+		        });**/
+				$.each(data, (index, student)=>{
+					htmlContent+=`<div class="student">
+						<div class="col-lg-12 text-center">
+							<h3>${student.level} of the Month</h3>
+
+							<h4 class="lead">${student.firstname} ${student.lastname}</h4>
+
+							<p>${student.class}</p>
+						</div>
+					</div>`;
+				});
+				$('#students').html(htmlContent);
+
+				$('#students').cycle({
+					"cleartypeNoBg" : true,
+					"fx" : "fade",
+					"pause" : "1",
+					"prev" : "#prev",
+					"next" : "#next",
+					"speed" : 500,
+					"timeout" : 10000
+				})
+			})
+		})
+	</script>
+</head>
+<style type="text/css">
+	.btn-left{
+		position: absolute;
+		left : 20px;
+		top : 10%;
+	}
+	.btn-right{
+		position: absolute;
+		right : 20px;
+		top : 10%;
+	}
+</style>
+<body>
+	<a href="#" id="prev" class="btn btn-primary btn-left">Prev</a>
+	<a href="#" id="next" class="btn btn-primary btn-right">Next</a>
+	<div id="students" class="container"></div>
+</body>
+</html>

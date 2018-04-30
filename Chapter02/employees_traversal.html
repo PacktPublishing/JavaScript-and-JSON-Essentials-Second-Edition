@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test Javascript</title>
+		<script type="text/javascript" src="data.js"></script>
+		<script type="text/javascript">
+			const employeeCount = data_json.length;
+			//console.log("data_json", data_json);
+			for(let i=0;i<employeeCount;i++){
+				console.log("Employee number is ", data_json[i].emp_no);
+				console.log(`Employee's full Name is ${data_json[i].first_name} ${data_json[i].last_name}`);
+				if(data_json[i].designation.title instanceof Array){
+					const designationCount = data_json[i].designation.title.length;
+					console.log("data_json", data_json[i].designation.title);
+					let designations = "";
+					for(let j=0;j<designationCount;j++){
+						designations+= `, ${data_json[i].designation.title[j]}`;
+					}
+
+					console.log(`Employee ${data_json[i].emp_no} has served as ${designations}`)
+				}else{
+					//Employee with only one designation
+					let designation = data_json[i].designation.title;
+					console.log(`Employee ${data_json[i].emp_no} has served as ${designation}`)
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h2>Parse JSON Feed using While</h2>
+		<p>This is a test program to learn how external JSON
+			feed stored in files can be parsed using the for Loop.</p>
+		</p>
+	</body>
+</html>
