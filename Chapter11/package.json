@@ -12,6 +12,6 @@
     "handlebar": "^1.0.0",
     "handlebars": "^4.0.11",
     "kafka-node": "^2.4.1",
-    "socket.io": "^2.0.4"
+    "socket.io": "^2.5.0"
   }
 }
